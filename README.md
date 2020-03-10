@@ -1,1 +1,95 @@
-# Productivity-Well
+Group Project - README Template
+===
+
+# Productivity Well
+
+## Table of Contents
+1. [Overview](#Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+2. [Schema](#Schema)
+
+## Overview
+### Description
+This Project is an app that is based around helping the user build good habits. While also giving people all around the world an opportunity to have access to clean drinking water.
+
+This app lets the user set a certain amount of time in which they wish to work on a specific task without any distractions. While the timer is running, the user's calls and texts will be deferred by the app. Also, while the timer is running, the user will not be allowed to use certain apps. If the user opens any apps that are designated distractions, the user will have to give up a pre-designated amount of money. Before the user starts the timer for their task, the user will have to set aside a certain amount of money that they are willing to give up if they do not complete the task. All the money collected from the user will be donated to a nonprofit orginization based around providing clean water people who do not have access to it.
+
+This app also allows users to connect with other users and show off how productive they have been.
+
+### App Evaluation
+[Evaluation of your app across the following attributes]
+- **Category:** Productivity
+- **Mobile:** This app would be developed only for mobile since it is designed to help users be productive by staying away from distractions on the phone. 
+- **Story:** This app allows users to set a timer to get specific task/s done and it will send money from user's linked paypal account to a non-profit organization if the user quits the app before the timer is finished.
+- **Market:** This app targets people who are looking to maximize their time effeiciency by removing distractions.
+- **Habit:** This app will help user build a good habit staying on task and avoiding distractions. The user will open the app whenever they need to focus.
+- **Scope:** The scope of This app will be having a functioning timer, as well as a way to handle users' money, as well as a clean UI, as well as an app that responds to incoming calls and texts. Features that are out of scope but would be nice to add if time permits a monthly or yearly donation subscription, a way for users to see and compete with friends. in-app currency, and clean animations for the building of a well.
+
+## Product Spec
+
+### 1. User Stories (Required and Optional)
+
+**Required Must-have Stories**
+* User must be able to register a new account
+* user must be able to sign in
+* user can link the app to paypal or bank
+* user can set the amount that should be deducted if target not met.(if they close the app before done)
+* user can set a timer
+* minimum 50 cents for money taken
+
+**Optional Nice-to-have Stories**
+* User can compare their progress with other app users
+* Do not disturb mode: cancel texts and phone calls
+* Result analysis (stats: hours, and money spent)
+* Choose the non-profit organization
+* Time recommendation: 20 minutes with 10 minute breaks
+* User can pause the app.
+* User can select what non profit they want their money to go if they fail  to complete the task.
+
+### 2. Screen Archetypes
+
+* Login Page
+   * user must be able to sign in
+   * user must be able to automaticlly be logged in
+* Register
+   * User must be able to register a new account
+* Timer Page
+   *  user can set a timer
+   *  minimum 50 cents for money taken
+   *  user can set the amount that should be deducted if target not met.(if they close the app before done)
+* Settings
+   * user can link the app to paypal or bank
+* Statistics
+   * User can compare their progress with other app users
+
+### 3. Navigation
+
+**Tab Navigation** (Tab to Screen)
+
+* Timer Page
+* Settings
+* Statistics
+
+**Flow Navigation** (Screen to Screen)
+
+* Login Page -> Account creation if no log in is available
+* Timer Page -> Start timer and choose amount of money that would be sent if the app is closed/run in background etc.
+* Settings Page -> Toggle Settings
+ 
+## Wireframes
+[Add picture of your hand sketched wireframes in this section]
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
+
+## Schema 
+[This section will be completed in Unit 9]
+### Models
+[Add table of models]
+### Networking
+- [Add list of network requests by screen ]
+- [Create basic snippets for each Parse network request]
+- [OPTIONAL: List endpoints if using existing API such as Yelp]
