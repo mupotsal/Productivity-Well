@@ -78,8 +78,7 @@ This app also allows users to connect with other users and show off how producti
 * Settings Page -> Toggle Settings
  
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://github.com/Technically-International/Productivity-Well/blob/master/Images/wireframe.jpg" width="300" height="300">
 
 ### [BONUS] Digital Wireframes & Mockups
 
