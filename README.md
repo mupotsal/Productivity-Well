@@ -87,7 +87,10 @@ This app also allows users to connect with other users and show off how producti
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+| Property       | Type.        | Discription  |
+| :------------- | :----------: | -----------: |
+|  Cell Contents | More Stuff   | And Again    |
+| You Can Also   | Put Pipes In | Like this \| |
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
