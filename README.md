@@ -73,7 +73,7 @@ This app also allows users to connect with other users and show off how producti
 
 **Flow Navigation** (Screen to Screen)
 
-* Login Page -> Account creation if no log in is available
+* Login Page -> Account creation if no login is available
 * Timer Page -> Start timer and choose the amount of money that would be sent if the app is closed/run in background etc.
 * Settings Page -> Toggle Settings
  
@@ -91,12 +91,18 @@ User
 | :------------- | :----------: | :----------- |
 |  objectID      | String       | unique id for the user    |
 |  UserName      | String       | what the user uses to login    |
-|  Password      | String       | the users login password |
+|  Password      | String       | the user's login password |
 |  Money         | Int          | this represents how much money the user has on their account |
 |  ProfilePic    | File         | image for the user |
-|  Email         | String.      | to help verify user and send them emails |
+|  Email         | String.      | to help verify the user and send them emails |
 
 ### Networking
+
+- Home Screen
+
+- Login Screen
+- - hi
+- SignUp Screen 
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
