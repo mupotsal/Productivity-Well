@@ -100,7 +100,11 @@ User
 
 - Home Screen
   - (Read/GET) Query the profile picture
-       ```java
+  - (Read/GET) Query the user balance
+  - (Read/GET) Query the user name
+  - (Update/PUT) Update user balance
+- Login Screen
+     ```java
          ParseUser.logInInBackground(username, password, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
@@ -112,14 +116,29 @@ User
                 Toast.makeText(LoginActivity.this, "success!",Toast.LENGTH_SHORT).show();
             }
         });
-         ```
-  - (Read/GET) Query the user balance
-  - (Read/GET) Query the user name
-  - (Update/PUT) Update user balance
-- Login Screen
    - (Read/GET) Query the user name
    - (Read/GET) Query the user password
 - SignUp Screen 
+ ```java
+     private void signUpUser(String username, String password){
+            // Create the ParseUser
+            ParseUser user = new ParseUser();
+            // Set core properties
+            user.setUsername(username);
+            user.setPassword(password);
+            // Invoke signUpInBackground
+            user.signUpInBackground(new SignUpCallback() {
+                public void done(ParseException e) {
+                    if (e != null) {
+                        Log.e(TAG, "Issue with login",e);
+                        return;
+
+                    }
+                    goMainActivity();
+                    Toast.makeText(LoginActivity.this, "success signing up!",Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
    - (Create/POST) Create a new username
    - (Create/POST) Create a new password for user
 
