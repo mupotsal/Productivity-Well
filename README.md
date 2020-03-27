@@ -89,7 +89,7 @@ This app also allows users to connect with other users and show off how producti
 ### Models
 User
 | Property       | Type.        | Description  |
-| :------------- | :----------: | -----------: |
+| :------------- | :----------: | :----------- |
 |  objectID      | String       | unique id for the user    |
 |  UserName      | String       | what the usere uses to login    |
 |  Password      | String       | the users login password |
