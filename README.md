@@ -100,7 +100,7 @@ User
 
 - Home Screen
   - (Read/GET) Query the user balance
-  ```java
+     ```java
          ParseUser.findInBackground(money, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
@@ -110,7 +110,7 @@ User
                 }
             }
         });
-    ```
+      ```
   - (Read/GET) Query the username
       ```java
          ParseUser.logInInBackground(username, new LogInCallback() {
@@ -125,11 +125,11 @@ User
         });
        ```
   - (Update/PUT) Update user balance
-    ```java
+      ```java
         put (KEY_DESCRIPTION, description);
-    ```
+      ```
 - Login Screen
-    ```java
+      ```java
          ParseUser.logInInBackground(username, password, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
@@ -141,11 +141,11 @@ User
                 Toast.makeText(LoginActivity.this, "success!",Toast.LENGTH_SHORT).show();
             }
         });
-    ```
+      ```
    - (Read/GET) Query the user name
    - (Read/GET) Query the user password
 - SignUp Screen 
-    ```java
+      ```java
      private void signup user(String username, String password){
             // Create the ParseUser
             ParseUser user = new ParseUser();
@@ -165,6 +165,6 @@ User
                 }
             });
         };
-    ```
+      ```
    - (Create/POST) Create a new username
    - (Create/POST) Create a new password for user
