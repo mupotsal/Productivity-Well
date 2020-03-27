@@ -99,9 +99,31 @@ User
 ### Networking
 
 - Home Screen
-  - (Read/GET) Query the profile picture
   - (Read/GET) Query the user balance
-  - (Read/GET) Query the user name
+  ```java
+         ParseUser.findInBackground(money, new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                    if (e != null) {
+                    Log.e(TAG, "Issue with login",e);
+                    return;
+                }
+            }
+        });
+```
+  - (Read/GET) Query the username
+       ```java
+         ParseUser.logInInBackground(username, new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                    if (e != null) {
+                    Log.e(TAG, "UserName not displaying",e);
+                    return;
+                }
+                Toast.makeText(LoginActivity.this, "success!",Toast.LENGTH_SHORT).show();
+            }
+        });
+```
   - (Update/PUT) Update user balance
 - Login Screen
      ```java
@@ -116,6 +138,7 @@ User
                 Toast.makeText(LoginActivity.this, "success!",Toast.LENGTH_SHORT).show();
             }
         });
+```
    - (Read/GET) Query the user name
    - (Read/GET) Query the user password
 - SignUp Screen 
@@ -138,6 +161,7 @@ User
                     Toast.makeText(LoginActivity.this, "success signing up!",Toast.LENGTH_SHORT).show();
                 }
             });
-        };```
+        };
+```
    - (Create/POST) Create a new username
    - (Create/POST) Create a new password for user
