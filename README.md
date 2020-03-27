@@ -100,18 +100,18 @@ User
 
 - Home Screen
   - (Read/GET) Query the profile picture
-       ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
+       ```java
+         ParseUser.logInInBackground(username, password, new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                    if (e != null) {
+                    Log.e(TAG, "Issue with login",e);
+                    return;
+                }
+                goMainActivity();
+                Toast.makeText(LoginActivity.this, "success!",Toast.LENGTH_SHORT).show();
             }
-         }
+        });
          ```
   - (Read/GET) Query the user balance
   - (Read/GET) Query the user name
