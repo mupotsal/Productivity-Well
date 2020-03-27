@@ -126,6 +126,7 @@ User
        ```
   - (Update/PUT) Update user balance
     ```java
+        put (KEY_DESCRIPTION, description);
     ```
 - Login Screen
     ```java
