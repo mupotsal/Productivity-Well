@@ -138,13 +138,6 @@ User
                     Toast.makeText(LoginActivity.this, "success signing up!",Toast.LENGTH_SHORT).show();
                 }
             });
-        }
+        };```
    - (Create/POST) Create a new username
    - (Create/POST) Create a new password for user
-
-   
-   
-   
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
