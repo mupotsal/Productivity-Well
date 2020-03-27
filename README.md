@@ -74,7 +74,7 @@ This app also allows users to connect with other users and show off how producti
 **Flow Navigation** (Screen to Screen)
 
 * Login Page -> Account creation if no log in is available
-* Timer Page -> Start timer and choose amount of money that would be sent if the app is closed/run in background etc.
+* Timer Page -> Start timer and choose the amount of money that would be sent if the app is closed/run in background etc.
 * Settings Page -> Toggle Settings
  
 ## Wireframes
@@ -87,10 +87,16 @@ This app also allows users to connect with other users and show off how producti
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-| Property       | Type.        | Discription  |
+User
+| Property       | Type.        | Description  |
 | :------------- | :----------: | -----------: |
-|  Cell Contents | More Stuff   | And Again    |
-| You Can Also   | Put Pipes In | Like this \| |
+|  objectID      | String       | unique id for the user    |
+|  UserName      | String       | what the usere uses to login    |
+|  Password      | String       | the users login password |
+|  Money         | Int          | this represents how much money the user has on their account |
+|  ProfilePic    | File         | image for the user |
+|  Email         | String.      | to help verify user and send them emails |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
