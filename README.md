@@ -99,10 +99,20 @@ User
 ### Networking
 
 - Home Screen
-
+  - (Read/GET) Query the profile picture
+  - (Read/GET) Query the user balance
+  - (Read/GET) Query the user name
+  - (Update/PUT) Update user balance
 - Login Screen
-  - hi
+   - (Read/GET) Query the user name
+   - (Read/GET) Query the user password
 - SignUp Screen 
+   - (Create/POST) Create a new username
+   - (Create/POST) Create a new password for user
+   - (Create/POST) Create a new userID
+   
+   
+   
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
