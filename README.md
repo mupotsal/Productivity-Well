@@ -85,13 +85,12 @@ This app also allows users to connect with other users and show off how producti
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 User
 | Property       | Type.        | Description  |
 | :------------- | :----------: | :----------- |
 |  objectID      | String       | unique id for the user    |
-|  UserName      | String       | what the usere uses to login    |
+|  UserName      | String       | what the user uses to login    |
 |  Password      | String       | the users login password |
 |  Money         | Int          | this represents how much money the user has on their account |
 |  ProfilePic    | File         | image for the user |
