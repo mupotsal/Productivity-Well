@@ -101,7 +101,7 @@ User
 - Home Screen
 
 - Login Screen
-- - hi
+  - hi
 - SignUp Screen 
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
