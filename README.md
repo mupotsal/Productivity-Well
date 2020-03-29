@@ -101,7 +101,7 @@ User
 - Home Screen
   - (Read/GET) Query the user balance
     ```java
-         ParseUser.findInBackground(money, new LogInCallback() {
+         ParseUser.findInBackground(userMoney, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
                     if (e != null) {
@@ -113,34 +113,79 @@ User
      ```
   - (Read/GET) Query the username
      ```java
-         ParseUser.logInInBackground(username, new LogInCallback() {
+     
+        public ParseUser getUser(){
+        return getParseUser(KEY_USER);
+    }
+       protected void queryPost() {
+        ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
+        query.include(Post.KEY_USER);
+        query.setLimit(20);
+        query.addDescendingOrder(Post.KEY_CREATED_AT);
+        query.findInBackground(new FindCallback<Post>() {
+            @Override
+            public void done(List<Post> posts, ParseException e) {
+                if (e != null){
+                    Log.e(TAG,"issues with getting post", e);
+                    return;
+                }
+
+                for (Post post : posts){
+                    Log.i(TAG, "Post" + post.getDescription() + ".username:" + post.getUser());
+                }
+
+                allPosts.addAll(posts);
+                adapter.notifyDataSetChanged();
+                swipeContainer.setRefreshing(false);
+            }
+        });
+
+        ParseUser.findInInBackground(username, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
                     if (e != null) {
                     Log.e(TAG, "UserName not displaying",e);
                     return;
                 }
-                Toast.makeText(LoginActivity.this, "success!",Toast.LENGTH_SHORT).show();
             }
         });
       ```
   - (Update/PUT) Update user balance
      ```java
+      private void updateBalance(Int userMoney, ParseUser currentUser) {
+        Post post = new Post();
+        post.setUserMoney(userMoney);
+        post.setUser(currentUser);
+        post.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e != null) {
+                    Log.e(TAG, "Error while saving", e);
+                    Toast.makeText(getContext(),"Error while saving!", Toast.LENGTH_SHORT).show();
+                }
+
+                Log.i (TAG,"Post save was successful");
+                etDesctiption.setText("");
+            }
+        });
+     
         put (KEY_DESCRIPTION, description);
      ```
 - Login Screen
      ```java
-         ParseUser.logInInBackground(username, password, new LogInCallback() {
+             public ParseUser getUser(){
+        return getParseUser(KEY_USER);
+    }
+
+        ParseUser.findInInBackground(username, password, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
                     if (e != null) {
-                    Log.e(TAG, "Issue with login",e);
+                    Log.e(TAG, "UserName not displaying",e);
                     return;
                 }
-                goMainActivity();
-                Toast.makeText(LoginActivity.this, "success!",Toast.LENGTH_SHORT).show();
             }
-        });
+
      ```
    - (Read/GET) Query the user name
    - (Read/GET) Query the user password
