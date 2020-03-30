@@ -117,26 +117,16 @@ User
         public ParseUser getUser(){
         return getParseUser(KEY_USER);
     }
-       protected void queryPost() {
-        ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
-        query.include(Post.KEY_USER);
-        query.setLimit(20);
-        query.addDescendingOrder(Post.KEY_CREATED_AT);
-        query.findInBackground(new FindCallback<Post>() {
+       protected void queryUser() {
+        ParseQuery query = ParseQuery.getQuery(User.class);
+        query.include(User.KEY_USER);
+        query.findInBackground(new FindCallback User() {
             @Override
-            public void done(List<Post> posts, ParseException e) {
+            public void done(User user, ParseException e) {
                 if (e != null){
-                    Log.e(TAG,"issues with getting post", e);
+                    Log.e(TAG,"issues with getting username", e);
                     return;
                 }
-
-                for (Post post : posts){
-                    Log.i(TAG, "Post" + post.getDescription() + ".username:" + post.getUser());
-                }
-
-                allPosts.addAll(posts);
-                adapter.notifyDataSetChanged();
-                swipeContainer.setRefreshing(false);
             }
         });
 
